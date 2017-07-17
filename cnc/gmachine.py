@@ -370,7 +370,7 @@ class GMachine(object):
             if pause < 0:
                 raise GMachineException("bad delay")
             hal.join()
-            time.sleep(pause)
+            time.sleep(pause/1000)
         elif c == 'G17':  # XY plane select
             self._plane = PLANE_XY
         elif c == 'G18':  # ZX plane select

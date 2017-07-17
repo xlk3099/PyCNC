@@ -31,7 +31,7 @@ ENDSTOP_INVERTED_Y = True
 ENDSTOP_INVERTED_Z = False  # Auto leveler
 
 # Workplace physical size.
-TABLE_SIZE_X_MM = 200
+TABLE_SIZE_X_MM = 400
 TABLE_SIZE_Y_MM = 200
 TABLE_SIZE_Z_MM = 220
 
