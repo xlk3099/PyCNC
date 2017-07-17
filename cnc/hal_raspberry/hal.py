@@ -3,7 +3,7 @@ import time
 from cnc.hal_raspberry import rpgpio
 from cnc.pulses import *
 from cnc.config import *
-from cnc.sensors import thermistor
+# from cnc.sensors import thermistor
 
 US_IN_SECONDS = 1000000
 
@@ -91,15 +91,16 @@ def get_extruder_temperature():
     """ Measure extruder temperature.
     :return: temperature in Celsius.
     """
-    return thermistor.get_temperature(EXTRUDER_TEMPERATURE_SENSOR_CHANNEL)
+    # return thermistor.get_temperature(EXTRUDER_TEMPERATURE_SENSOR_CHANNEL)
+    return
 
 
 def get_bed_temperature():
     """ Measure bed temperature.
     :return: temperature in Celsius.
     """
-    return thermistor.get_temperature(BED_TEMPERATURE_SENSOR_CHANNEL)
-
+    # return thermistor.get_temperature(BED_TEMPERATURE_SENSOR_CHANNEL)
+    return
 
 def disable_steppers():
     """ Disable all steppers until any movement occurs.

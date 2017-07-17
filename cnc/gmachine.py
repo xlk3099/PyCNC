@@ -332,7 +332,7 @@ class GMachine(object):
         if velocity < MIN_VELOCITY_MM_PER_MIN:
             raise GMachineException("feed speed too low")
         # select command and run it
-        if c == 'G0':  # rapid move
+        if c in ['G0', 'G00']:  # rapid move
             vl = max(MAX_VELOCITY_MM_PER_MIN_X,
                      MAX_VELOCITY_MM_PER_MIN_Y,
                      MAX_VELOCITY_MM_PER_MIN_Z,
@@ -357,7 +357,7 @@ class GMachine(object):
                     if v < vl:
                         vl = v
             self._move_linear(delta, vl)
-        elif c == 'G1':  # linear interpolation
+        elif c in ['G1', 'G01']:  # linear interpolation
             self._move_linear(delta, velocity)
         elif c == 'G2':  # circular interpolation, clockwise
             self._move_circular(delta, radius, velocity, CW)
